@@ -5,9 +5,12 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const flash = require('connect-flash');
-
-const app = express();
 const expressLayouts = require('express-ejs-layouts');
+const serverless = require("serverless-http");
+
+// Init app
+const app = express();
+
 // Moment
 app.locals.moment = require('moment');
 
@@ -39,17 +42,17 @@ app.use(express.urlencoded({ extended: true }));
 // View engine
 app.set('view engine', 'ejs');
 app.use(expressLayouts);
-app.set('layout', 'layouts/main'); // main.ejs layout file
+app.set('layout', 'layouts/main');
 
-// Static folders
-app.use('/css', express.static(path.join(__dirname, 'assets/stylesheets/css')));
-app.use('/js', express.static(path.join(__dirname, 'assets/javascripts/js')));
-app.use('/img', express.static(path.join(__dirname, 'assets/img')));
+// Static assets (VERY important for Netlify)
+app.use('/css', express.static(path.join(__dirname, '../../assets/stylesheets/css')));
+app.use('/js', express.static(path.join(__dirname, '../../assets/javascripts/js')));
+app.use('/img', express.static(path.join(__dirname, '../../assets/img')));
 
 // Routes
-const routes = require('./routes');
+const routes = require('../../routes');
 app.use('/', routes);
 
-// Start server
-const port = process.env.PORT || 4040;
-app.listen(port, () => console.log(`Server running on port ${port}`));
+// IMPORTANT: No app.listen()
+// Export for Netlify
+module.exports.handler = serverless(app);

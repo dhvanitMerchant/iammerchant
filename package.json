@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
+    "dev": "netlify dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Group 2",
@@ -30,6 +31,7 @@
     "nodemailer-promise": "2.0.0",
     "nodemailer-sendgrid-transport": "0.2.0",
     "nodemon": "1.19.1",
+    "serverless-http": "^4.0.0",
     "set-value": "2.0.1"
   }
 }
