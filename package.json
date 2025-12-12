@@ -1,0 +1,35 @@
+{
+  "name": "Dhvanit24",
+  "version": "1.0.0",
+  "description": "My Portfolio",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Group 2",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "7.1.0",
+    "acorn": "5.7.4",
+    "bcryptjs": "^3.0.3",
+    "connect-flash": "0.1.1",
+    "cookie-parser": "1.4.4",
+    "dotenv": "8.0.0",
+    "ejs": "^3.1.10",
+    "express": "4.17.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "1.16.2",
+    "jquery": "3.5.0",
+    "lodash": "4.17.21",
+    "minimist": "1.2.7",
+    "mixin-deep": "1.3.2",
+    "moment": "2.24.0",
+    "mongoose": "5.9.10",
+    "nodemailer": "6.4.6",
+    "nodemailer-promise": "2.0.0",
+    "nodemailer-sendgrid-transport": "0.2.0",
+    "nodemon": "1.19.1",
+    "set-value": "2.0.1"
+  }
+}

@@ -1,0 +1,332 @@
+extends ../layouts/main.pug
+
+block globals
+  
+
+block content
+  section#intro.intro 
+    .overlay
+    .content
+      .container.clearfix
+        .row
+          .col-md-12.col-sm-10
+            p.italic.animated.flipInX.hidden-xs Hello!
+            
+            h1.fadeInDown.heading I am Dhvanit Merchant
+                
+            p.italic.animated.fadeInDown.heading Software Developer/ IT Support Analyst
+
+  include ../partials/nav.pug
+
+
+
+
+  //ribbon
+
+
+  .ribbon
+    | Dhvanit Merchant
+    i
+    i
+    i
+    i
+  // end ribbon
+
+  // about Page
+  section#about.text
+    .container
+      
+      .row
+        .col-sm-6
+          .LI-profile-badge.hidden-lg.hidden-xl(data-version='v1' data-size='large' data-locale='en_US' data-type='horizontal' data-theme='light'         data-vanity='dhvanit24')
+            a.LI-simple-link(href='https://ca.linkedin.com/in/dhvanit24?trk=profile-badge') Dhvanit Merchant
+          
+          .LI-profile-badge.visible-lg.hidden-xs(data-version='v1' data-size='large' data-locale='en_US' data-type='vertical' data-theme='light'         data-vanity='dhvanit24')
+            a.LI-simple-link(href='https://ca.linkedin.com/in/dhvanit24?trk=profile-badge') Dhvanit Merchant
+               
+        .col-sm-6
+          h2.heading.animated.fadeInUp About me
+
+          .typed
+            p.lead.headingStatement(data-animate='fadeInRight' data-os-animation-delay='0s') Something about me...!!!.
+          p
+            |Dedicated and Efficient Computer programmer analyst with 8+ months of experience in both Software Development and IT Support. Worked in exciting group projects during my whole career. Ability to break down complex issues into easy to understand "plain language". Seeking a challenging position to utilize my skills and knowledge in dynamic and rewarding corporate settings
+          p
+            | Well-known as a highly creative developer who can always be trusted to come up with a new approach. But I know that the user's thoughts come first, and I never try to impose my ideas on others. Instead, I spend a lot of time understanding the user before suggesting ideas. I can (and often do) work well alone, but I’m at my best collaborating with others.
+
+  
+  // Experience
+  section#services(style="background-image: url('img/skill.jpeg'); ")
+    .overlay1
+    .content
+      .container
+        .row
+          .col-sm-6
+            h2.headingSkill.animated.fadeInUp Skills
+          .col-sm-6
+            span
+              h4.heading1.fadeInUp HTML || CSS3 || Javascript
+            .html-progress
+              span.progress-value 95%
+            br
+            span
+              h4.heading1.fadeInUp NodeJS
+            
+            .css-progress
+              span.css-value 85%
+            br
+            span
+              h4.heading1.fadeInUp GIT
+            .js-progress
+              span.js-value 65%
+            br
+            span
+              h4.heading1.fadeInUp AngularJS
+            .ajs-progress
+              span.ajs-value 70%
+            br
+            br
+  // Services end
+  //Project Stats
+  section#portfolio.sectiontitle
+    h2.heading.text-center.fadeInUp Projects statistics
+    #projectFacts.sectionClass.container
+      .fullWidth.eight.columns
+        .projectFactsWrap
+          .item.wow.fadeInUpBig.animated.animated(data-number='6' style='visibility: visible;')
+            i.fa.fa-briefcase
+            p#number1.number 6
+            span
+            p Projects done
+          .item.wow.fadeInUpBig.animated.animated(data-number='50' style='visibility: visible;')
+            i.fa.fa-smile-o
+            p#number2.number 55
+            span
+            p Happy clients
+          .item.wow.fadeInUpBig.animated.animated(data-number='240' style='visibility: visible;')
+            i.fa.fa-coffee
+            p#number3.number 240
+            span
+            p Cups of coffee
+          .item.wow.fadeInUpBig.animated.animated(data-number='404' style='visibility: visible;')
+            i.fa.fa-ban
+            p#number4.number 404
+            span
+            p Bad Reviews
+
+  
+  // Portfolio / gallery
+  section#portfolio.gallery.hidden
+    .project-heading
+      #particles-js-project.back  
+      h2.heading.text-center.fadeInUp Projects
+    .container.clearfix
+      .col-md-12
+        .row
+          .col-sm-4
+            .box
+              a(href='img/RESUME.jpg' title='' data-toggle='lightbox' data-gallery='Based on HTML, Javascript and CSS' data-title='Portfolio Website' data-footer='My first website ')
+                img.img-responsive(src='img/RESUME.jpg' alt='')
+            p
+              a.link(href='https://200382214.github.io/blog/')
+                | This was my first portfolio site created from scratch with three main elements which are HTML, CSS and Javascript
+          .col-sm-4
+            .box
+              a(href='img/sign.png' title='' data-toggle='lightbox' data-gallery='Based on PHP' data-title='' data-footer='Based on PHP')
+                img.img-responsive(src='img/sign.png' alt='')
+            p
+              a.link(href='https://barriebookstore.azurewebsites.net/trial1/')
+                | Sweet Login-page which can send you the welcome page where you can again log-out and re-login again.
+          .col-sm-4
+            .box
+              a(href='img/NETApp.jpg' title='' data-toggle='lightbox' data-gallery='Based on C# & ASP.NET' data-title='My ASP.NET Application' data-footer='Based on C# & ASP.NET')
+                img.img-responsive(src='img/NETApp.jpg' alt='')
+            p
+              | ASP.Net is the very popular language in 2k18 so I created a live database handling application based on all vehicles in which the user
+              | can create, edit and delete the vehicles.
+        .row
+          .col-sm-4
+            .box
+              a(href='img/nodejs.png' title='' data-toggle='lightbox' data-gallery='Based on NodeJs' data-title='NodeJs' data-footer='Based on NodeJs')
+                img.img-responsive(src='img/nodejs.png' alt='')
+            p
+              a.link(href='https://infinitygroup.herokuapp.com/')
+                | A web application made with the help of NodeJs and deployed through heroku a great platform in todays world
+          .col-sm-4
+            .box
+              a(href='img/asp1.png' title='' data-toggle='lightbox' data-gallery='ASP.NET' data-title='A Subscription Application' data-footer='Based on MVC ')
+                img.img-responsive(src='img/asp2.png' alt='')
+            p
+              | A functional ASP.NET MVC 5 membership website complete with an Entity Framework code-first database and two user interfaces; one for administrators and one for the end-user.
+          .col-sm-4
+            .box
+              a(href='img/socket.png' title='' data-toggle='lightbox' data-gallery='portfolio' data-title='Portfolio image 6' data-footer='Some footer information')
+                img.img-responsive(src='img/socket.png' alt='')
+            p
+              a.link(href='http://infinityworld.herokuapp.com/')
+                | This is a live chat platform made with the help of nodejs and socket.io server. Here you can talk with each other no matter how many of them you are.
+  // Portfolio / gallery end
+
+  // text page
+
+  //New Exper
+  section.expSec
+
+    .contentExp.container
+      #particles-js.back
+    
+      .row
+        h2.heading.text-center.fadeInUp#xp Work Experience
+        
+        .fullWidth.eight.columns
+        ul.cbp_tmtimeline
+          li
+            .cbp_tmicon.cbp_tmicon-phone.hidden-xs
+              i.faPra.fa-briefcase
+            .cbp_tmlabel.wow.fadeInRight.animated
+              h3 Software developer
+              .date
+                i.fa.fa-calendar
+                | January 2019 - April 2019
+              h4
+                i.fa.fa-suitcase
+                | The Nationwide Group
+              
+              .duties.hidden-xs
+                p 
+                  i.fa.fa-cog.fa-spin.fa-fw
+                  i Delivered Java/J2EE projects and releases working in a team-based environment. 
+
+                p 
+                  i.fa.fa-cog.fa-spin.fa-fw
+                  i Documented recommended system changes through JIRA ticketing system 
+                p 
+                  i.fa.fa-cog.fa-spin.fa-fw
+                  i Liaised with Marketing Team to approve new look and feel of the system 
+                p 
+                  i.fa.fa-cog.fa-spin.fa-fw
+                  i Worked across new technologies to improve the UI of the web applications for clients 
+                
+         
+          li
+            .cbp_tmicon.cbp_tmicon-screen.hidden-xs
+              i.faPra.fa-briefcase
+            .cbp_tmlabel.wow.fadeInRight.animated
+              h3 IT Support Analyst
+              h4
+                i.fa.fa-suitcase
+                | The Nationwide Group
+              .date
+                i.fa.fa-calendar
+                | May 2018 - September 2018
+              
+              .duties.hidden-xs
+                p
+                  i.fa.fa-cog.fa-spin.fa-fw
+                  i Answer technical help desk calls in a pleasant manner and aim for first contact resolution. 
+                p
+                  i.fa.fa-cog.fa-spin.fa-fw
+                  i Assist in the support of corporate field mobile technologies. 
+                p
+                  i.fa.fa-cog.fa-spin.fa-fw
+                  i Monitor staff self-created help desk tickets and action and/or route issues for resolution.
+              
+                p
+                  i.fa.fa-cog.fa-spin.fa-fw
+                  i Perform 1st and 2nd level support for Client software and hardware issues and diagnose potential areas of failure.
+                          
+  // contact
+  section#contact(style='background-color: #fff;')
+     
+    .container.text-page
+      .row
+        .col-md-12
+          h2.heading Contact
+          .row
+            .col-sm-6
+              img.img-responsive(src='img/feedback.jpeg' alt='')
+              br
+            .col-sm-6
+              include ../partials/flash.pug
+              form#contact-form.contact-form(action=(home ? null : '/sendFeedback'), method='post')
+                .controls
+                  .row
+                    .form-group.animated.zoomIn
+                      input.form-control(type='text' name='author[firstName]' placeholder='Enter your firstname' required='required',  value=(null))
+                    .form-group.animated.zoomIn
+                      input.form-control(type='text' name='author[lastName]' placeholder='Enter your lastname'
+                      required='required',  value=(null))
+                    .form-group.animated.zoomIn
+                      input.form-control(type='email' name='author[email]' placeholder='Enter your email' 
+                      required='required', value=(null))
+                    .form-group.animated.zoomIn
+                      input.form-control(type='text' name='author[comments]' placeholder='Enter your feedback' required='required',  value=(null))
+                    .form-group
+                      .text-center
+                        button.btn.btn-primary(type='submit' name='name' value='Send message')
+                          | Send Message
+        .col-md-12
+          p.social
+            a.facebook(href='https://www.facebook.com/dhvanit.merchant.1' title='')
+              i.fa.fa-facebook-square
+            a.twitter(href='https://twitter.com/Dhvanit24' title='')
+              i.fa.fa-twitter
+            a.instagram(href='https://www.instagram.com/iammerchanttt' title='')
+              i.fa.fa-instagram
+            a.linkedin(href='https://www.linkedin.com/in/dhvanit24/' title='')
+              i.fa.fa-linkedin
+            a.github(href='https://github.com/200382214/' title='')
+              i.fa.fa-github
+    .dream
+      #contain
+        #flip
+          div
+            div discover
+          div
+            div dream
+          div
+            div explore
+
+
+    // Try moving the mouse around and clicking the text area
+    .container
+      .fakeScreen#snow
+        p.line1.fake
+          | [&nbsp;&ldquo;I&apos;m an IT Support Analyst.&rdquo;,
+          span.cursor1 _
+        p.line2.fake
+          | &ldquo;I&apos;m a Software developer.&rdquo;,
+          span.cursor2 _
+        p.line3.fake
+          | &ldquo;Let&apos;s work together!&rdquo;&nbsp;]
+          span.cursor3 _
+        p.line4.fake
+          | &gt;
+          span.cursor4 _
+
+    .back-to-top
+      i.fa.fa-angle-double-up.fa-fw
+
+  .container  
+    include ../partials/footer.pug
+
+  script(src='/js/jquery.cookie.js')
+  script(src='/js/ekko-lightbox.js')
+  script(src='/js/jquery.sticky.js')
+  script(src='/js/jquery.scrollTo.min.js')
+  script(src='/js/front.js')
+  script(src='/js/main.js')
+  script(src='/js/respond.min.js')
+
+
+
+
+  
+    
+
+ 
+          
+         
+ 
+ 
+ 

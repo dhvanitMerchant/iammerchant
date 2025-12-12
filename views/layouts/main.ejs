@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dhvanit24</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.default.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="/css/ekko-lightbox.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+  
+
+
+    <!-- Flash messages -->
+    <% if (flash.success.length) { %>
+        <div class="alert alert-success"><%= flash.success.join('<br>') %></div>
+    <% } %>
+    <% if (flash.error.length) { %>
+        <div class="alert alert-danger"><%= flash.error.join('<br>') %></div>
+    <% } %>
+
+    <!-- Page Content -->
+    <%- body %>
+
+    <!-- JS -->
+    <script src="/js/jquery-1.11.0.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- Particles.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <script src="/js/front.js"></script>
+    <script src="/js/jquery.sticky.js"></script>
+
+</body>
+
+</html>
