@@ -2,6 +2,9 @@
   functions = "netlify/functions"
   publish = "assets"
 
+[functions]
+  included_files = ["views/**", "assets/**"]
+
 [[redirects]]
   from = "/*"
   to = "/.netlify/functions/app"

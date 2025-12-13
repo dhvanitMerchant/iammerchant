@@ -41,10 +41,12 @@ app.use(express.urlencoded({ extended: true }));
 
 // View engine
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '../../views'));
 app.use(expressLayouts);
 app.set('layout', 'layouts/main');
 
 // Static assets (VERY important for Netlify)
+
 app.use('/css', express.static(path.join(__dirname, '../../assets/stylesheets/css')));
 app.use('/js', express.static(path.join(__dirname, '../../assets/javascripts/js')));
 app.use('/img', express.static(path.join(__dirname, '../../assets/img')));
