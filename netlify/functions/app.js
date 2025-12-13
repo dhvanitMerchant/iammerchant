@@ -1,4 +1,5 @@
 require('dotenv').config();
+require('ejs'); // 👈 FORCE Netlify to bundle EJS
 
 const express = require('express');
 const path = require('path');
