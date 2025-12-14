@@ -1,0 +1,61 @@
+<svg
+  class="svg-logo-dm"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 100"
+  preserveAspectRatio="xMidYMid meet"
+>
+  <!-- Neon Stroke DM -->
+  <text
+    x="50%"
+    y="50%"
+    dominant-baseline="middle"
+    text-anchor="middle"
+    font-family="Orbitron, sans-serif"
+    font-size="72"
+    font-weight="700"
+    fill="transparent"
+    stroke="#00ffc4"
+    stroke-width="2"
+    letter-spacing="2"
+  >
+    DM
+  </text>
+
+  <!-- Animated Stroke -->
+  <text
+    x="50%"
+    y="50%"
+    dominant-baseline="middle"
+    text-anchor="middle"
+    font-family="Orbitron, sans-serif"
+    font-size="72"
+    font-weight="700"
+    fill="transparent"
+    stroke="#00ffc4"
+    stroke-width="2"
+    stroke-dasharray="300"
+    stroke-dashoffset="300"
+    letter-spacing="2"
+    style="animation: dash 3s linear infinite alternate;"
+  >
+    DM
+  </text>
+</svg>
+
+<style>
+  @keyframes dash {
+    0% {
+      stroke-dashoffset: 300;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .svg-logo-dm {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+</style>
