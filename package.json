@@ -6,7 +6,9 @@
   "scripts": {
     "start": "nodemon app.js",
     "dev": "netlify dev",
-      "build": "echo 'Nothing to build, static site'",
+    "scss": "sass assets/scss:assets/stylesheets/css --no-source-map",
+    "scss:watch": "sass assets/scss:assets/stylesheets/css --watch",
+  "build": "npm run scss",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Group 2",
@@ -34,5 +36,8 @@
     "nodemon": "1.19.1",
     "serverless-http": "^4.0.0",
     "set-value": "2.0.1"
+  },
+  "devDependencies": {
+    "sass": "^1.96.0"
   }
 }

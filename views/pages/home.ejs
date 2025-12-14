@@ -9,11 +9,41 @@
         <div class="col-md-12 col-sm-10 text-center">
             <p class="hello animate__animated animate__fadeInDown" style="font-family: 'Orbitron', monospace;  display:inline-flex; align-items:center;">
             <span style="font-weight:600">Hello, I’m</span>
-            </p>
-          <h1 class="heading animate__animated animate__fadeInUp">Dhvanit Merchant</h1>
-          <p class="dynamic-text italic">
+              <p class="dynamic-text italic">
             <span id="typed"></span>
           </p>
+            </p>
+          
+        <div class="parent-container">
+  <div class="hero-container">
+
+    <!-- DHVANIT MERCHANT SVG -->
+    <svg
+      class="svg-logo"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1200 200"
+      preserveAspectRatio="xMidYMid meet"
+    >
+      <text
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        font-family="Poppins, Montserrat, Arial, sans-serif"
+        font-size="96"
+        font-weight="700"
+        fill="transparent"
+        stroke="#0091EA"
+        stroke-width="3"
+        letter-spacing="8"
+      >
+        DHVANIT MERCHANT
+      </text>
+    </svg>
+  </div>
+</div>
+
+          
          
           <div class=" animate__animated animate__fadeInUp">
            <p class="social">
@@ -82,8 +112,6 @@
       <div id="navigation" class="collapse navbar-collapse navbar-right">
         <ul class="nav navbar-nav">
           <li><a href="#about">About</a></li>
-          <li><a href="#services">Skills</a></li>
-          <li><a href="#portfolio">Projects</a></li>
           <li><a href="#xp">Work Xp</a></li>
           <li><a href="#contact">Contact</a></li>
      
@@ -252,75 +280,67 @@
 
   <div class="container text-page">
 
-    <h2 class=" section-title animate fade-up">Contact</h2>
-    <div class="contact-intro animate fade-up delay-1">
-      <p class="book-sub">Got an idea? Let's talk about it.</p>
-      <div class="contact-highlight">
-      <span class="highlight-text">Share your thoughts</span>
-      <span class="highlight-dot"></span>
-      </div>
-    </div>
-
-    <style>
-    .contact-intro {
-    margin-bottom: 2rem;
-    text-align: center;
-    }
-
-    .book-sub {
-    font-size: 1.2rem;
-    color: #fff;
-    margin-bottom: 1rem;
-    }
-
-    .contact-highlight {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    }
-
-    .highlight-text {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #fff;
-    transition: color 0.3s ease;
-    }
-
-    .highlight-dot {
-    width: 12px;
-    height: 12px;
-    background-color: #4CAF50;
-    border-radius: 50%;
-    animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
-    }
-    </style>
+    <h2 class="section-title animate fade-up">Contact</h2>
 
     <div class="row book-row">
 
-    
-      <!-- Right: Form -->
-      <div class="col-sm-12 book-form-col">
+      <!-- Left Column: Info / Optional Image -->
+      <div class="col-md-4 contact-info">
+  <h3>Get in touch</h3>
+  <p>Feel free to drop me a message for collaborations, inquiries, or just to say hi!</p>
 
-        <form id="contact-form" class="book-form animate fade-right delay-2"  method="post">
-          
-          <input class="book-input animate-line" type="text" name="author[firstName]" placeholder="First Name" required>
-          <input class="book-input animate-line delay-1" type="text" name="author[lastName]" placeholder="Last Name" required>
-          <input class="book-input animate-line delay-2" type="email" name="author[email]" placeholder="Email Address" required>
-          <textarea class="book-textarea animate-line delay-3" name="author[comments]" placeholder="Your Message" required></textarea>
+  <!-- Image -->
+  <div class="contact-image-wrapper">
+    <img src="/img/dm.jpeg" alt="Dhvanit Merchant" class="contact-image">
+  </div>
 
-          <button class="book-btn animate-line delay-4" type="submit">Send Message</button>
+  <ul class="contact-details">
+    <li>Email: <a href="mailto:dhvanit24merchant@gmail.com">dhvanit24merchant@gmail.com</a></li>
+    <li>Phone: +1 249 359 1044</li>
+    <li>Location: Toronto, Canada</li>
+  </ul>
+</div>
+
+      <!-- Right Column: Form -->
+      <div class="col-md-7 contact-card">
+
+        <form id="contact-form" class="book-form animate fade-right delay-2" method="post">
+
+          <div class="form-row">
+            <div class="form-group">
+              <input class="book-input" type="text" name="author[firstName]" placeholder="First Name" required>
+            </div>
+            <div class="form-group">
+              <input class="book-input" type="text" name="author[lastName]" placeholder="Last Name" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group full-width">
+              <input class="book-input" type="email" name="author[email]" placeholder="Email Address" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group full-width">
+              <textarea class="book-textarea" name="author[comments]" placeholder="Your Message" required></textarea>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group full-width">
+              <button class="book-btn" type="submit">Send Message</button>
+            </div>
+          </div>
+
         </form>
+
       </div>
 
     </div>
   </div>
 </section>
+
 
 
 
