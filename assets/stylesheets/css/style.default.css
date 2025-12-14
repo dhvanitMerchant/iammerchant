@@ -1268,51 +1268,6 @@ a.list-group-item.active > .badge,
   perspective: 1200px;
 }
 
-/* Headings */
-.book-heading {
-  font-size: 2.8rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 6px;
-  letter-spacing: 0.5px;
-  display: inline-block;
-  color: #ffffff;
-  text-shadow: 0 2px 8px rgba(0,255,180,0.3);
-}
-
-.book-sub {
-  font-size: 1.1rem;
-  text-align: center;
-  margin-bottom: 50px;
-  opacity: 0.85;
-  line-height: 1.6;
-  color: #b0c4ff;
-}
-
-/* Row layout */
-.book-row {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-/* Image */
-.book-img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow:
-      0 8px 20px rgba(0,255,180,0.2),
-      0 0 15px rgba(100,80,255,0.15);
-  transition: transform 0.6s ease, box-shadow 0.6s ease;
-}
-
-.float-img.hovered {
-  transform: translateY(-8px) rotate(-1deg);
-  box-shadow:
-      0 12px 30px rgba(0,255,180,0.35),
-      0 0 25px rgba(100,80,255,0.25);
-}
 
 /* Form card */
 .book-form {
@@ -1372,7 +1327,7 @@ a.list-group-item.active > .badge,
 ===================== */
 
 @media (max-width: 768px) {
-  .book-page-contact {
+  .book-page-contact, .contact-card {
     padding: 60px 0;
   }
 
@@ -1393,7 +1348,6 @@ a.list-group-item.active > .badge,
 
   .book-form {
     width: 100%;
-    padding: 24px;
   }
 
   .book-input, .book-textarea {
