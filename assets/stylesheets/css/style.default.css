@@ -1405,8 +1405,14 @@ a.list-group-item.active > .badge,
   .book-page-contact, .contact-card {
     padding: 60px 0;
   }
-
-  .book-heading {
+ p{
+  padding: 0 15px;
+ }
+ .section-title{
+  padding: 0 15px;
+  font-size: large;
+   }
+     .book-heading {
     font-size: 2rem;
     margin-bottom: 10px;
   }
@@ -1541,13 +1547,12 @@ a.list-group-item.active > .badge,
   }
 }
 
-
 .fortune-section{
-   padding: 40px 0;
+  padding: 40px 0;
   background:
-    linear-gradient(120deg, rgba(6,10,20,0.95), rgba(10,14,30,0.95)),
-    radial-gradient(circle at 30% 30%, rgba(0,255,180,0.05), transparent 70%),
-    radial-gradient(circle at 70% 70%, rgba(100,80,255,0.03), transparent 70%);
+   linear-gradient(120deg, rgba(6,10,20,0.95), rgba(10,14,30,0.95)),
+   radial-gradient(circle at 30% 30%, rgba(0,255,180,0.05), transparent 70%),
+   radial-gradient(circle at 70% 70%, rgba(100,80,255,0.03), transparent 70%);
   background-blend-mode: normal, overlay, overlay;
   background-size: 200% 200%;
   animation: auroraBackground 25s ease-in-out infinite alternate;
@@ -1560,7 +1565,9 @@ a.list-group-item.active > .badge,
   overflow: hidden;
   z-index: 0;
 }
-
+.fortune-title{
+  color: #fff;
+}
 .fortune-game {
   max-width: 420px;
   margin: 60px auto;
@@ -1568,9 +1575,9 @@ a.list-group-item.active > .badge,
   text-align: center;
   background: linear-gradient(145deg, rgba(0,255,180,0.15), rgba(100,80,255,0.15)); /* northern lights tint */
   box-shadow:
-      0 10px 25px rgba(0,255,180,0.3),
-      0 0 15px rgba(100,80,255,0.2),
-      0 0 25px rgba(0,102,255,0.2);
+    0 10px 25px rgba(0,255,180,0.3),
+    0 0 15px rgba(100,80,255,0.2),
+    0 0 25px rgba(0,102,255,0.2);
   border-radius: 16px;
   color: #fff;
   font-family: "DM Sans", sans-serif;
@@ -1622,4 +1629,75 @@ button {
 
 button:hover {
   transform: scale(1.05);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .fortune-section {
+   padding: 30px 15px;
+  }
+
+  .fortune-game {
+   max-width: 100%;
+   margin: 40px auto;
+   padding: 25px 20px;
+  }
+
+  .fortune-game h2 {
+   font-size: 22px;
+  }
+
+  .crystal {
+   font-size: 60px;
+   margin-bottom: 15px;
+  }
+
+  .fortune-text {
+   font-size: 16px;
+   min-height: 50px;
+   margin: 15px 0;
+  }
+
+  button {
+   padding: 10px 18px;
+   font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fortune-section {
+   padding: 20px 10px;
+  }
+
+  .fortune-game {
+   padding: 20px 15px;
+   margin: 15px auto;
+  }
+
+  .fortune-game h2 {
+   font-size: 18px;
+   margin-bottom: 4px;
+  }
+
+  .subtitle {
+   font-size: 12px;
+   margin-bottom: 20px;
+  }
+
+  .crystal {
+   font-size: 48px;
+   margin-bottom: 12px;
+  }
+
+  .fortune-text {
+   font-size: 14px;
+   min-height: 45px;
+   margin: 12px 0;
+  }
+
+  button {
+   padding: 8px 16px;
+   font-size: 12px;
+   width: 100%;
+  }
 }
