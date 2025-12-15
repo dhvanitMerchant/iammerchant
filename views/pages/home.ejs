@@ -78,49 +78,57 @@
   });
 </script>
 
-  <!-- Navbar -->
- <div class="sticky-wrapper sticky">
-  <div class="navbar navbar-default book-navbar" role="navigation">
-
+ <!-- Navbar -->
+<div class="sticky-wrapper sticky">
+  <nav class="navbar navbar-default book-navbar" role="navigation">
     <div class="container">
 
+      <!-- LEFT: Logo + Animated Tagline -->
       <div class="navbar-header">
-        <button class="navbar-btn btn-sm navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+
+        <!-- Mobile Toggle -->
+        <button type="button"
+                class="navbar-toggle navbar-btn btn-sm"
+                data-toggle="collapse"
+                data-target="#main-navbar">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
 
-      </div>
+        <!-- LOGO -->
+        <a class="navbar-brand" href="#top">
+          <img src="/img/dm-logo.png" alt="Dhvanit Merchant" class="navbar-logo">
+        </a>
 
-      <div id="navigation" class="collapse navbar-collapse navbar-left">
-        <ul class="nav navbar-nav">
-          <li class="active">
-                <div class="dream">
-              <div id="contain">
-                <div id="flip">
-                  <div><div>discover</div></div>
-                  <div><div>dream</div></div>
-                  <div><div>explore</div></div>
-                </div>
+        <!-- Animated Text -->
+        <div class="brand-tagline hidden-xs">
+          <div class="dream">
+            <div id="contain">
+              <div id="flip">
+                <div><div>discover</div></div>
+                <div><div>dream</div></div>
+                <div><div>explore</div></div>
               </div>
             </div>
-          </li>
-        </ul>
+          </div>
+        </div>
+
       </div>
 
-      <div id="navigation" class="collapse navbar-collapse navbar-right">
+      <!-- RIGHT: Navigation -->
+      <div class="collapse navbar-collapse navbar-right" id="main-navbar">
         <ul class="nav navbar-nav">
           <li><a href="#about">About</a></li>
           <li><a href="#xp">Work Xp</a></li>
           <li><a href="#contact">Contact</a></li>
-     
         </ul>
       </div>
 
     </div>
-  </div>
+  </nav>
 </div>
+
 
 
 
@@ -304,36 +312,26 @@
       <!-- Right Column: Form -->
       <div class="col-md-7 contact-card">
 
-        <form id="contact-form" class="book-form animate fade-right delay-2" method="post">
+      <form id="contact-form" class="book-form animate fade-right delay-2">
 
-          <div class="form-row">
-            <div class="form-group">
-              <input class="book-input" type="text" name="author[firstName]" placeholder="First Name" required>
-            </div>
-            <div class="form-group">
-              <input class="book-input" type="text" name="author[lastName]" placeholder="Last Name" required>
-            </div>
-          </div>
+        <input type="hidden" name="from_name" value="Portfolio Contact">
 
-          <div class="form-row">
-            <div class="form-group full-width">
-              <input class="book-input" type="email" name="author[email]" placeholder="Email Address" required>
-            </div>
-          </div>
+        <div class="form-row">
+          <input class="book-input" type="text" name="first_name" placeholder="First Name" required>
+          <input class="book-input" type="text" name="last_name" placeholder="Last Name" required>
+        </div>
 
-          <div class="form-row">
-            <div class="form-group full-width">
-              <textarea class="book-textarea" name="author[comments]" placeholder="Your Message" required></textarea>
-            </div>
-          </div>
+        <div class="form-row">
+          <input class="book-input" type="email" name="email" placeholder="Email Address" required>
+        </div>
 
-          <div class="form-row">
-            <div class="form-group full-width">
-              <button class="book-btn" type="submit">Send Message</button>
-            </div>
-          </div>
+        <div class="form-row">
+          <textarea class="book-textarea" name="message" placeholder="Your Message" required></textarea>
+        </div>
 
-        </form>
+        <button class="book-btn" type="submit">Send Message</button>
+      </form>
+
 
       </div>
 
@@ -342,7 +340,34 @@
 </section>
 
 
+<script>
+  document.getElementById("contact-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
 
+  const form = e.target;
+
+  const data = {
+    firstName: form.querySelector('[name="first_name"]').value,
+    lastName: form.querySelector('[name="last_name"]').value,
+    email: form.querySelector('[name="email"]').value,
+    message: form.querySelector('[name="message"]').value,
+  };
+
+  const res = await fetch("http://localhost:5000/send-email", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+
+  if (res.ok) {
+    alert("Message sent 🚀");
+    form.reset();
+  } else {
+    alert("Failed to send 😢");
+  }
+});
+
+</script>
 
 
 <script>

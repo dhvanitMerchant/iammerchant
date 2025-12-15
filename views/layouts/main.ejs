@@ -35,6 +35,53 @@
 
     <script src="/js/front.js"></script>
     <script src="/js/jquery.sticky.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+    <script>
+  emailjs.init("user_LZpCELjZBVGE1nvhqLa6I");
+
+  const form = document.getElementById("contact-form");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    Swal.fire({
+      title: "Sending...",
+      text: "Please wait",
+      allowOutsideClick: false,
+      didOpen: () => {
+        Swal.showLoading();
+      },
+    });
+
+    emailjs
+      .sendForm("service_u3yzrxb", "template_5uh7vex", this)
+      .then(() => {
+        Swal.fire({
+          icon: "success",
+          title: "Message Sent!",
+          background: "#0b0f1a",
+          color: "#fff",
+          text: "I’ll get back to you soon 😊",
+          confirmButtonText: "Okay",
+          confirmButtonColor: "#00ffb3",
+
+        });
+        form.reset();
+      })
+      .catch((err) => {
+        console.error(err);
+        Swal.fire({
+          icon: "error",
+          title: "Oops!",
+          text: "Something went wrong. Please try again.",
+        });
+      });
+  });
+</script>
 
 </body>
 
