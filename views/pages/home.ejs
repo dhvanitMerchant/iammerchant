@@ -338,6 +338,135 @@
     </div>
   </div>
 </section>
+<section class="fortune-section">
+  <h3 class="fortune-title animate__animated animate__fadeInDown">Peek Into Your Destiny 🌌</h3>
+  <div id="particles-js-fortune" class="back"></div>
+<div class="fortune-game">
+  <h2>🔮 Fortune Teller</h2>
+  <p class="subtitle">Click the crystal ball to reveal your fortune</p>
+
+  <div class="crystal" id="crystal">🔮</div>
+
+  <p id="fortune-text" class="fortune-text">
+    Your future awaits...
+  </p>
+
+  <button id="fortune-btn">Reveal My Fortune</button>
+</div>
+</section>
+<script>
+const fortunes = [
+  "Great opportunities are coming your way ✨",
+  "A surprise message will make you smile 📩",
+  "Trust your instincts — they are guiding you 🔮",
+  "Something you’ve been waiting for will arrive soon ⏳",
+  "Today is a good day to start something new 🌱",
+  "Your creativity will open unexpected doors 🎨",
+  "A calm mind will bring powerful clarity 🧘",
+  "You are closer than you think 💫",
+
+  "A small step today leads to big change tomorrow 👣",
+  "Someone appreciates you more than you realize 💛",
+  "An old idea will return with new potential 🔁",
+  "Luck favors your patience right now 🍀",
+  "Your hard work is quietly paying off 💼",
+  "A meaningful conversation is coming 💬",
+  "Your confidence will inspire someone else 🌟",
+  "Peace begins when you trust yourself 🕊️",
+
+  "A fresh perspective will shift everything 👀",
+  "You are exactly where you need to be 📍",
+  "An unexpected opportunity will challenge you 💡",
+  "Your kindness will come back to you tenfold 🤍",
+  "Today holds a pleasant surprise 🎁",
+  "Growth is happening, even if you can’t see it 🌿",
+  "A bold decision will bring relief 🔓",
+  "You will soon feel proud of yourself 🏆",
+
+  "Your curiosity will lead to something exciting 🔍",
+  "A moment of stillness will bring insight 🌌",
+  "Your energy attracts good things ⚡",
+  "Let go of what no longer serves you 🍃",
+  "Your future self is thanking you 🙏",
+  "A creative spark will light your path 🔥",
+  "Someone is rooting for you behind the scenes 🎭",
+  "Your ideas deserve to be heard 🎙️",
+
+  "A door will open when you least expect it 🚪",
+  "Your intuition is stronger than ever 🌙",
+  "A peaceful resolution is near ☮️",
+  "What you seek is seeking you too 🧲",
+  "Your courage will surprise even you 🦁",
+  "A new habit will improve your life 🔁",
+  "Joy is found in the little moments 🌈",
+  "Your patience will soon be rewarded ⏰",
+
+  "A chance encounter will leave an impression 👥",
+  "Your passion will guide your next move 🎯",
+  "Something lost will be found again 🔎",
+  "Your persistence will overcome obstacles 🧗",
+  "A wave of motivation is coming 🚀",
+  "Trust the process — it’s working ⚙️",
+  "Your voice carries more power than you know 🔊",
+  "A meaningful connection will deepen 💞",
+
+  "The answer you seek is already within you 🧠",
+  "A calm heart makes wise decisions ❤️",
+  "Your dreams are worth chasing 🌠",
+  "A quiet victory is on the way 🥇",
+  "Your resilience will be rewarded 🛡️",
+  "A new skill will unlock new paths 🗝️",
+  "Your authenticity is your strength 🧩",
+  "Something beautiful is unfolding 🌸",
+
+  "A gentle reminder will shift your mindset 🔔",
+  "Your optimism will carry you far ☀️",
+  "A problem will resolve itself naturally 🌀",
+  "You are becoming your best self 🧬",
+  "A spark of inspiration will strike soon ⚡",
+  "Your effort today builds tomorrow 🧱",
+  "A positive change is already in motion 🔄",
+  "You are worthy of good things 🌼",
+
+  "Your focus will bring clarity 🎯",
+  "A moment of gratitude will change your day 🙌",
+  "Your journey is uniquely yours 🛤️",
+  "A simple choice will make a big difference 🧠",
+  "Your presence brings calm to others 🌊",
+  "A hidden talent will reveal itself 🎭",
+  "Your next chapter begins soon 📖",
+  "Everything is aligning in your favor 🌌",
+
+  "A smile will open an unexpected door 😊",
+  "Your balance will bring peace ⚖️",
+  "A gentle push will lead you forward 👉",
+  "Your inner light is growing brighter 💡",
+  "A meaningful moment will stay with you 💭",
+  "Your confidence is your superpower 🦸",
+  "A fresh start is closer than you think 🌅",
+  "Good things are quietly finding their way to you 🍃"
+];
+
+
+  const crystal = document.getElementById("crystal");
+  const text = document.getElementById("fortune-text");
+  const btn = document.getElementById("fortune-btn");
+
+  function revealFortune() {
+    text.style.opacity = 0.3;
+    text.textContent = "Consulting the spirits...";
+
+    setTimeout(() => {
+      const random = fortunes[Math.floor(Math.random() * fortunes.length)];
+      text.textContent = random;
+      text.style.opacity = 1;
+    }, 1200);
+  }
+
+  btn.addEventListener("click", revealFortune);
+  crystal.addEventListener("click", revealFortune);
+</script>
+
 
 
 <script>
