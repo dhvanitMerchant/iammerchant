@@ -777,7 +777,7 @@ function sticky() {
 
 particlesJS("particles-js-intro", {
   "particles": {
-    "number": { "value": 100 },
+    "number": { "value": window.innerWidth < 768 ? 30 : 100 },
     "color": { "value": ["#00fff0", "#ff00ff", "#42e695"] },
     "shape": { "type": "circle" },
     "opacity": { "value": 0.6, "random": true },
@@ -810,7 +810,7 @@ particlesJS("particles-js-intro", {
 });
 particlesJS("particles-js-intro2", {
    particles: {
-    number: { value: 100 },
+    number: { value: window.innerWidth < 768 ? 30 : 100 },
     color: { value: ["#00d4ff", "#0099ff", "#00ffcc", "#ff0099"] },
     shape: { type: "circle" },
     opacity: { 
@@ -858,7 +858,7 @@ particlesJS("particles-js-intro2", {
 
 particlesJS("particles-js-intro3", {
   particles: {
-    number: { value: 100 },
+    number: { value: window.innerWidth < 768 ? 30 : 100 },
     color: { value: ["#00d4ff", "#0099ff", "#00ffcc", "#ff0099"] },
     shape: { type: "circle" },
     opacity: { 
@@ -907,7 +907,7 @@ particlesJS("particles-js-intro3", {
 
 particlesJS("particles-js-intro4", {
   particles: {
-    number: { value: 100 },
+    number: { value: window.innerWidth < 768 ? 30 : 100 },
     color: { value: ["#00d4ff", "#0099ff", "#00ffcc", "#ff0099"] },
     shape: { type: "circle" },
     opacity: { 
@@ -952,10 +952,9 @@ particlesJS("particles-js-intro4", {
   retina_detect: true
 });
 
-
 particlesJS("particles-js-fortune", {
   particles: {
-    number: { value: 100 },
+    number: { value: window.innerWidth < 768 ? 30 : 100 },
     color: { value: ["#00d4ff", "#0099ff", "#00ffcc", "#ff0099"] },
     shape: { type: "circle" },
     opacity: { 
