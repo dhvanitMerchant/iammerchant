@@ -1,0 +1,44 @@
+ html, body {
+  font-family: Open Sans;
+  scroll-behavior: smooth;
+  background-color: black;
+}
+
+h1 {
+  letter-spacing: -15px;
+  font-family: Open Sans;
+  color: white;
+  text-align: center;
+  font-size: 200px;
+  font-weight: 800;
+  line-height: 200px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800');
+
+
+section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-size: 10vw;
+  z-index: 1;
+  font-weight: 600;
+  text-align: center;
+}

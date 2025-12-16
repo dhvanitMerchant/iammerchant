@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="/css/dream.css">
+
+    
+<section>
+  <h1>Still dreaming. Still building.</h1>
+</section>
+<section class="section">
+  <div class="bg"></div>
+  <h1>If you’re reading this thank you.</h1>
+</section>
+<section class="section">
+  <div class="bg"></div>
+  <h1>One day, this page will feel small.</h1>
+</section>
+<section class="section">
+  <div class="bg"></div>
+  <h1>Nice, right?</h1>
+</section>
+<style>
+   
+</style>
+ <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+let getRatio = el => window.innerHeight / (window.innerHeight + el.offsetHeight);
+
+gsap.utils.toArray(".section").forEach((section, i) => {
+  section.bg = section.querySelector(".bg"); 
+
+  // Give the backgrounds some random images
+  section.bg.style.backgroundImage = `url(https://assets.codepen.io/16327/portrait-pattern-${i + 2}.jpg)`;
+  
+  // the first image (i === 0) should be handled differently because it should start at the very top.
+  // use function-based values in order to keep things responsive
+  gsap.fromTo(section.bg, {
+    backgroundPosition: () => i ? `50% ${-window.innerHeight * getRatio(section)}px` : "50% 0px"
+  }, {
+    backgroundPosition: () => `50% ${window.innerHeight * (1 - getRatio(section))}px`,
+    ease: "none",
+    scrollTrigger: {
+      trigger: section,
+      start: () => i ? "top bottom" : "top top", 
+      end: "bottom top",
+      scrub: true,
+      invalidateOnRefresh: true // to make it responsive
+    }
+  });
+
+});
+</script>

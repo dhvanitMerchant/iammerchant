@@ -49,6 +49,14 @@ app.set("views", path.join(__dirname, "../../views"));
 app.use(expressLayouts);
 app.set("layout", "layouts/main");
 
+app.get('/dream', (req, res) => {
+  res.render('pages/dream');
+});
+
+app.get('/projects', (req, res) => {
+  res.render('pages/projects');
+});
+
 // Static assets
 app.use("/css", express.static(path.join(__dirname, "../../assets/stylesheets/css")));
 app.use("/js", express.static(path.join(__dirname, "../../assets/javascripts/js")));
