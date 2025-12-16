@@ -1,44 +1,57 @@
- html, body {
-  font-family: Open Sans;
-  scroll-behavior: smooth;
-  background-color: black;
-}
-
-h1 {
-  letter-spacing: -15px;
-  font-family: Open Sans;
-  color: white;
-  text-align: center;
-  font-size: 200px;
-  font-weight: 800;
-  line-height: 200px;
-}
-
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800');
 
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
 
+/* Section wrapper */
 section {
   position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
+
+/* Background image */
 .bg {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+  inset: 0;
+  z-index: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  filter: brightness(0.65);
 }
 
+/* Heading */
 h1 {
-  font-size: 10vw;
+  position: relative;
   z-index: 1;
-  font-weight: 600;
+  color: white;
   text-align: center;
+  font-weight: 800;
+  font-size: clamp(48px, 10vw, 180px);
+  line-height: 1;
+  letter-spacing: -0.08em;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 48px;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  section {
+    height: auto;
+    min-height: 100vh;
+    padding: 24px;
+  }
 }
