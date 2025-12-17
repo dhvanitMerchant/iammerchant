@@ -1000,3 +1000,50 @@ particlesJS("particles-js-fortune", {
 });
 
 
+particlesJS("particles-js-projects", {
+  particles: {
+    number: { value: window.innerWidth < 768 ? 30 : 100 },
+    color: { value: ["#00d4ff", "#0099ff", "#00ffcc", "#ff0099"] },
+    shape: { type: "circle" },
+    opacity: { 
+      value: 0.7, 
+      random: true, 
+      anim: { enable: true, speed: 0.8, opacity_min: 0.2 } 
+    },
+    size: { 
+      value: 4, 
+      random: true, 
+      anim: { enable: true, speed: 2, size_min: 1.5 } 
+    },
+    line_linked: {
+      enable: true,
+      distance: 180,
+      color: "#00ffcc",
+      opacity: 0.3,
+      width: 1.5
+    },
+    move: {
+      enable: true,
+      speed: 1.5,
+      direction: "none",
+      out_mode: "out",
+      bounce: false,
+      attract: { enable: false }
+    }
+  },
+  interactivity: {
+    detect_on: "window",
+    events: {
+      onhover: { enable: true, mode: "grab" },
+      onclick: { enable: true, mode: "push" },
+      onresize: { enable: true, density_auto: true, density_area: 1000 }
+    },
+    modes: {
+      grab: { distance: 300, line_linked: { opacity: 0.5 } },
+      push: { particles_nb: 3 },
+      remove: { particles_nb: 2 }
+    }
+  },
+  retina_detect: true
+});
+
